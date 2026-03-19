@@ -1,0 +1,28 @@
+config:
+  # Service configuration
+  poc-iac-database:service_type: mongodb
+  poc-iac-database:environment: dev
+
+  # MongoDB Atlas API keys (set via pulumi config)
+  # pulumi config set mongodbatlas:publicKey <public-key>
+  # pulumi config set --secret mongodbatlas:privateKey <private-key>
+
+  # Region
+  poc-iac-database:region: asia-southeast1
+
+  # MongoDB Atlas Organization ID (required)
+  # Set via: pulumi config set mongodb_atlas_org_id <org-id>
+  # poc-iac-database:mongodb_atlas_org_id: <your-org-id>
+
+  # MongoDB Dev Configuration (Free Tier)
+  poc-iac-database:mongodb_tier: M0
+  poc-iac-database:mongodb_version: "7.0"
+  poc-iac-database:mongodb_backup_enabled: "false"
+
+  # Database settings
+  poc-iac-database:mongodb_db_name: appdb
+  poc-iac-database:mongodb_user: appuser
+  # Set password via: pulumi config set --secret mongodb_password <password>
+
+  # IP Access (for development - restrict in production!)
+  poc-iac-database:mongodb_allowed_cidr: "0.0.0.0/0"

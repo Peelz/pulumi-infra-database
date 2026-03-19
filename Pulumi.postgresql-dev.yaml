@@ -1,0 +1,25 @@
+config:
+  # Service configuration
+  poc-iac-database:service_type: postgresql
+  poc-iac-database:environment: dev
+
+  # GCP Project (set via: pulumi config set gcp:project <project-id>)
+  # gcp:project: <your-gcp-project-id>
+
+  # Region
+  poc-iac-database:region: asia-southeast1
+
+  # PostgreSQL Dev Configuration
+  poc-iac-database:postgres_tier: db-f1-micro
+  poc-iac-database:postgres_availability: ZONAL
+  poc-iac-database:postgres_disk_size: "10"
+  poc-iac-database:postgres_disk_autoresize_limit: "50"
+  poc-iac-database:postgres_backup_retention: "3"
+  poc-iac-database:postgres_deletion_protection: "false"
+  poc-iac-database:postgres_point_in_time_recovery: "false"
+  poc-iac-database:postgres_public_ip: "true"
+
+  # Database settings
+  poc-iac-database:postgres_db_name: appdb
+  poc-iac-database:postgres_user: appuser
+  # Set password via: pulumi config set --secret postgres_password <password>

@@ -1,0 +1,44 @@
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+.env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Pulumi
+Pulumi.*.yaml.bak
+*.pulumi/
+
+# Secrets & sensitive files
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+service-account.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ruff / Linting
+.ruff_cache/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/

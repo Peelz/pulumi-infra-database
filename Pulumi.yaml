@@ -1,0 +1,11 @@
+name: poc-iac-database
+description: Multi-service database infrastructure (Cloud SQL PostgreSQL & MongoDB Atlas)
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: gcp-python
